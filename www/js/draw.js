@@ -14,11 +14,11 @@ function DRAW (data) {
 	image(data.app_buf, data.app_buf_x, data.app_buf_y);
 
 	// images de l'application
-	for (var c in data.app_content.pages[data.page_k0]) { // boucle sur les composants
+	for (var c = 0; c < data.app_content.pages[data.page_k0].length; c++) { // boucle sur les composants
 
 		var comp = data.app_content.pages[data.page_k0][c];
-		
-		if (comp.images && comp.images.length) {
+
+		if (comp.is_visible && comp.images && comp.images.length) {
 
 			var img = comp.images[comp.img_i];
 			var wh_ratio = img.width / img.height;

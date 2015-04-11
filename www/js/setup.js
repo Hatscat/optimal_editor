@@ -6,7 +6,7 @@ function SETUP (data) {
 
 	for (var p in data.app_content.pages) { // boucle sur les pages
 
-		for (var c in data.app_content.pages[p]) { // boucle sur les composants
+		for (var c = 0; c < data.app_content.pages[p].length; c++) { // boucle sur les composants
 
 			// load images
 			if (data.app_content.pages[p][c].img_src && data.app_content.pages[p][c].img_src.length) {
