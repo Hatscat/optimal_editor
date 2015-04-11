@@ -49,7 +49,7 @@ function SETUP (data) {
 
 		if (++loaded_img_nb >= img_nb) { // all img are loaded
 			
-			console.log("all imgs loaded !");
+			console.log("all images are loaded !");
 
 			for_eah_components_in_each_pages(data, function (comp) {
 

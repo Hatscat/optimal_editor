@@ -23,11 +23,16 @@
 		DRAW(data);
 	}
 
-	/**  EVENTS --> events.js  **/
+	/**  EVENTS  **/
 
 	window.windowResized = function () {
 
 		WINDOW_RESIZED(data);
+	}
+
+	window.mouseMoved = function () {
+
+		MOUSE_MOVED(data);
 	}
 
 	window.mousePressed = function () {

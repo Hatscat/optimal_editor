@@ -14,7 +14,7 @@
 				"w": 0.3,
 				"h": 0.3,
 				"is_visible": true,
-				"href": null,
+				"href": "login",
 				"update": {
 					"function": null,
 					"args": []
@@ -61,7 +61,7 @@
 				"w": 0.2,
 				"h": 0.2,
 				"is_visible": true,
-				"href": "login",
+				"href": "signup",
 				"update": {
 					"function": null,
 					"args": []
@@ -157,7 +157,56 @@
 				"w": 1,
 				"h": 1,
 				"is_visible": true,
-				"href": null,
+				"href": "homepage",
+				"update": {
+					"function": null,
+					"args": []
+				},
+				"on_mouse_pressed": {
+					"function": null,
+					"args": []
+				},
+				"on_mouse_released": {
+					"function": null,
+					"args": []
+				},
+				"on_mouse_moved": {
+					"function": null,
+					"args": []
+				},
+				"on_key_pressed": {
+					"function": null,
+					"args": []
+				},
+				"on_key_released": {
+					"function": null,
+					"args": []
+				},
+				"on_device_move": {
+					"function": null,
+					"args": []
+				},
+				"on_device_turn": {
+					"function": null,
+					"args": []
+				}
+			}
+		],
+		"signup": [
+			{
+				"img_src": [
+					"test2.png"
+				],
+				"graphic_name": null,
+				"anchor_x": 0.5,
+				"anchor_y": 0.5,
+				"x": 0.5,
+				"y": 0.5,
+				"z": 0.9,
+				"w": 1,
+				"h": 1,
+				"is_visible": true,
+				"href": "homepage",
 				"update": {
 					"function": null,
 					"args": []

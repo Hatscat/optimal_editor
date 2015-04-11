@@ -24,6 +24,7 @@ function get_config () {
 		page_k0: '',
 		page_k1: '',
 		are_img_loaded: false,
+		mouse_pos: null,
 		canvas: null,
 		app_buf: null,
 		app_content: null,
