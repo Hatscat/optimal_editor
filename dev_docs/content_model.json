@@ -2,7 +2,9 @@
 	"pages": {
 		STRING: [ // le nom de la page (ex.: "homepage"), qui contient tous ses composants
 			{
-				"img_src": STRING, // l'url de l'image (chemin relatif depuis le serveur), doit être automatisé à l'upload
+				"img_src": [ // un tableau des images du composant, il faudra faire attention à l'ordre !
+					STRING, // l'url d'une image (chemin relatif depuis le serveur), doit être automatisé à l'upload
+				],
 				"graphic_name": STRING, // le nom du canvas si c'est un graphique, dynamique ou statique
 				"anchor_x": NUMBER, // le point d'origine horizontal du composant, en % de la largeur du composant
 				"anchor_y": NUMBER, // le point d'origine vertical du composant, en % de la hauteur du composant

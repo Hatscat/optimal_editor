@@ -4,26 +4,31 @@ function get_config () {
 
 	var config = {
 
+		editor_conf: {
+			app_buf_wh_ratio: 0.667,
+			current_page: 'homepage',
+			background_color: {
+				r: 64,
+				g: 128,
+				b: 255
+			}
+		},
+		app_content_url: 'app_content.json',
 		canvas_x: 0.25,
 		canvas_y: 0,
 		canvas_w: 0.5,
 		canvas_h: 1,
-		app_buf_wh_ratio: 0.667,
 		app_buf_x: 0,
 		app_buf_y: 0,
-		//current_page:,
-		//next_page:,
 		image_mode: CORNER,
+		page_k0: '',
+		page_k1: '',
 		canvas: null,
 		app_buf: null,
-		delta_time: 1,
-		img_src: {
-		},
-		images: {},
-		fonts: [
-			'Shadows Into Light',
-			'Play'
-		]
+		app_content: null,
+		delta_time: 1
+
 	};
+
 	return config;
 }
