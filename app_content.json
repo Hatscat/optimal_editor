@@ -1,0 +1,51 @@
+{
+	"pages": {
+		"homepage": [
+			{
+				"img_src": "test.jpg",
+				"graphic_name": null,
+				"anchor_x": 0.5,
+				"anchor_y": 0.5,
+				"x": 0.5,
+				"y": 0.5,
+				"z": 0.1,
+				"w": 0.3,
+				"h": 0.3,
+				"is_visible": true,
+				"href": null,
+				"update": {
+					"function": null,
+					"args": []
+				},
+				"on_mouse_pressed": {
+					"function": null,
+					"args": []
+				},
+				"on_mouse_released": {
+					"function": null,
+					"args": []
+				},
+				"on_mouse_moved": {
+					"function": null,
+					"args": []
+				},
+				"on_key_pressed": {
+					"function": null,
+					"args": []
+				},
+				"on_key_released": {
+					"function": null,
+					"args": []
+				},
+				"on_device_move": {
+					"function": null,
+					"args": []
+				},
+				"on_device_turn": {
+					"function": null,
+					"args": []
+				}
+			}
+		]
+	}
+}

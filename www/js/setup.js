@@ -2,13 +2,15 @@
 
 function SETUP (data) {
 
-	data.canvas = createCanvas(windowWidth, windowHeight);
+								window.data = data; // tmp, to dev
 
-	//data.canvas_2 = createCanvas(windowWidth/2, windowHeight/2); // no, use graphics -> http://p5js.org/reference/#/p5/createGraphics
+	data.canvas = createCanvas(1, 1);
+	
+	data.app_buf = createGraphics(1, 1); // ne pas mettre 0 !
 
-	imageMode(data.image_mode);
+	data.app_buf.imageMode(data.image_mode);
 
-	textAlign(CENTER, CENTER);
+	//textAlign(CENTER, CENTER);
 
-	noStroke();
+	//noStroke();
 }
