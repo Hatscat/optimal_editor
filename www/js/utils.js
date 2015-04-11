@@ -1,32 +1,24 @@
 "use strict";
 
-function swap (array, a, b) {
+function for_eah_components_in_page (data, page_name, func) {
 
-	var tmp = array[a];
+	for (var i = -1, c; c = data.app_content.pages[page_name][++i];) { // boucle sur les composants
 
-	array[a] = array[b];
-	array[b] = tmp;
+		try {
+
+			func(c, i, page_name);
+			
+		} catch (error) {
+
+			console.log(error);
+		}
+	}
 }
 
-function quick_sort_from_obj_prop (array, prop_name, dir, start, end) {
-	
-	// dir == 1 pour un tri croissant, dir == -1 pour un décroissant
+function for_eah_components_in_each_pages (data, func) {
 
-	if (start >= end) return;
-	
-	var left = start - 1;
-	var right = end + 1;
-	var pivot = array[start][prop_name] * dir;
+	for (var p in data.app_content.pages) { // boucle sur les pages
 
-	while (true) {
-
-		do right--; while(array[right][prop_name] * dir > pivot);
-		do left++; while(array[left][prop_name] * dir < pivot);
-
-		if (left < right) swap(array, left, right);
-		else break;
+		for_eah_components_in_page(data, p, func);
 	}
-
-	quick_sort_from_obj_prop(array, prop_name, dir, start, right);
-	quick_sort_from_obj_prop(array, prop_name, dir, right+1, end);
 }

@@ -23,6 +23,7 @@ function get_config () {
 		image_mode: CORNER,
 		page_k0: '',
 		page_k1: '',
+		are_img_loaded: false,
 		canvas: null,
 		app_buf: null,
 		app_content: null,

@@ -2,24 +2,31 @@
 
 function SETUP (data) {
 
-								window.data = data; // tmp, to dev, to rm after
+								window.data = data; // warning : tmp, to dev, to rm after
 
-	for (var p in data.app_content.pages) { // boucle sur les pages
+	var img_nb = 0;
+	var loaded_img_nb = 0;
 
-		for (var c = 0; c < data.app_content.pages[p].length; c++) { // boucle sur les composants
+	for_eah_components_in_each_pages(data, function (comp) {
 
-			// load images
-			if (data.app_content.pages[p][c].img_src && data.app_content.pages[p][c].img_src.length) {
+		// load images
+		if (comp.img_src && comp.img_src.length) {
 
-				data.app_content.pages[p][c].images = [];
-				data.app_content.pages[p][c].img_i = 0;
+			comp.images = [];
+			comp.img_i = 0;
+			comp.box = {};
 
-				for (var i = 0; i < data.app_content.pages[p][c].img_src.length; i++) {
-					data.app_content.pages[p][c].images[i] = loadImage('img/' + data.app_content.pages[p][c].img_src[i]);
-				}
+			for (var i = 0; i < comp.img_src.length; i++) {
+
+				img_nb++;
+				comp.images[i] = loadImage('img/' + comp.img_src[i], img_loaded);
 			}
 		}
 
+	});
+
+	for (var p in data.app_content.pages) {
+		// sort by z layer
 		quick_sort_from_obj_prop(data.app_content.pages[p], 'z', -1, 0, data.app_content.pages[p].length-1);
 	}
 
@@ -37,4 +44,30 @@ function SETUP (data) {
 	//textAlign(CENTER, CENTER);
 
 	//noStroke();
+
+	function img_loaded () {
+
+		if (++loaded_img_nb >= img_nb) { // all img are loaded
+			
+			console.log("all imgs loaded !");
+
+			for_eah_components_in_each_pages(data, function (comp) {
+
+				if (comp.images && comp.images.length) {
+
+					var img = comp.images[0];
+					var wh_ratio = img.width / img.height;
+					var h_max = comp.h * data.app_buf.height;
+
+					comp.box.h = min( h_max, h_max * ( (comp.w * data.app_buf.width) / (h_max * wh_ratio) ) ) | 0;
+					comp.box.w = comp.box.h * wh_ratio;
+					comp.box.x = data.app_buf_x + comp.x * data.app_buf.width - comp.box.w * comp.anchor_x | 0;
+					comp.box.y = data.app_buf_y + comp.y * data.app_buf.height - comp.box.h * comp.anchor_y | 0;
+				}
+
+			});
+
+			data.are_img_loaded = true;
+		}
+	}
 }

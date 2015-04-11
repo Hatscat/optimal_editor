@@ -30,9 +30,15 @@
 		WINDOW_RESIZED(data);
 	}
 
+	window.mousePressed = function () {
+
+		MOUSE_PRESSED(data);
+	}
+
 	window.mouseReleased = function () {
 
 		MOUSE_RELEASED(data);
 	}
+
 
 })();

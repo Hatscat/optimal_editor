@@ -13,8 +13,3 @@ function WINDOW_RESIZED (data) {
 	data.app_buf_x = (width - data.app_buf.width) * 0.5 | 0;
 	data.app_buf_y = (height - data.app_buf.height) * 0.5 | 0;
 }
-
-function MOUSE_RELEASED (data) {
-
-
-}

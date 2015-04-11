@@ -13,25 +13,14 @@ function DRAW (data) {
 	// draw du buffer global de l'app
 	image(data.app_buf, data.app_buf_x, data.app_buf_y);
 
-	// images de l'application
-	for (var c = 0; c < data.app_content.pages[data.page_k0].length; c++) { // boucle sur les composants
-
-		var comp = data.app_content.pages[data.page_k0][c];
+	// draw des images de l'application
+	for_eah_components_in_page (data, data.page_k0, function (comp) {
 
 		if (comp.is_visible && comp.images && comp.images.length) {
 
-			var img = comp.images[comp.img_i];
-			var wh_ratio = img.width / img.height;
-			var h_max = comp.h * data.app_buf.height;
-			var h = min( h_max, h_max * ( (comp.w * data.app_buf.width) / (h_max * wh_ratio) ) ) | 0;
-			var w = h * wh_ratio;
-
-			image(img,
-				data.app_buf_x + comp.x * data.app_buf.width - w * comp.anchor_x | 0,
-				data.app_buf_y + comp.y * data.app_buf.height - h * comp.anchor_y | 0,
-				w, h);
+			image(comp.images[comp.img_i], comp.box.x, comp.box.y, comp.box.w, comp.box.h);
 		}
-	}
+	});
 
 	// frame rate 
 	fill(0, 255, 0);
