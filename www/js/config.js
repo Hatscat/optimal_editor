@@ -5,7 +5,7 @@ function get_config () {
 	var config = {
 
 		editor_conf: {
-			app_buf_wh_ratio: 0.667,
+			app_buf_wh_ratio: 1.5,
 			current_page: 'homepage',
 			background_color: {
 				r: 64,
