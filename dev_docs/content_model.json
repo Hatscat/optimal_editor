@@ -1,0 +1,51 @@
+{
+	"pages": {
+		STRING: [ // le nom de la page (ex.: "homepage"), qui contient tous ses composants
+			{
+				"img_src": STRING, // l'url de l'image (chemin relatif depuis le serveur), doit être automatisé à l'upload
+				"graphic_name": STRING, // le nom du canvas si c'est un graphique, dynamique ou statique
+				"anchor_x": NUMBER, // le point d'origine horizontal du composant, en % de la largeur du composant
+				"anchor_y": NUMBER, // le point d'origine vertical du composant, en % de la hauteur du composant
+				"x": NUMBER, // la position horizontal, en % de la largeur maximum
+				"y": NUMBER, // la position vertical, en % de la hauteur maximum
+				"z": NUMBER, // l'ordre de rendu : 0 le composant est devant tous les autres, de 0 à +∞
+				"w": NUMBER, // la largeur maximale du composant, en % de la largeur maximum
+				"h": NUMBER, // la hauteur maximale du composant, en % de la hauteur maximum
+				"is_visible": BOOLEAN, // le composant doit-il être visible à l'ouverture de la page
+				"href": STRING, // le lien en cas de click (racourcie d'un event "on_mouse_released")
+				"update": { // event déclencher à chaque frame, utile pour les animations par exemple
+					"function": STRING, // le nom de la fonction qui doit être appelée
+					"args": [] // les arguments de la fonction, s'il y en a
+				},
+				"on_mouse_pressed": { // event déclenché lorsque l'utilisateur maintient le click / touch sur le composant
+					"function": STRING,
+					"args": []
+				},
+				"on_mouse_released": { // event déclenché lorsque l'utilisateur relache le click / touch du le composant
+					"function": STRING,
+					"args": []
+				},
+				"on_mouse_moved": { // event déclenché lorsque l'utilisateur survole simplement le composant
+					"function": STRING,
+					"args": []
+				},
+				"on_key_pressed": { // event déclenché lorsque l'utilisateur appuie sur une touche d'un clavier
+					"function": STRING,
+					"args": []
+				},
+				"on_key_released": { // event déclenché lorsque l'utilisateur relache une touche d'un clavier
+					"function": STRING,
+					"args": []
+				},
+				"on_device_move": { // event déclenché lorsque l'utilisateur déplace le device (mobile) dans l'espace
+					"function": STRING,
+					"args": []
+				},
+				"on_device_turn": { // event déclenché lorsque l'utilisateur applique des rotations au device (mobile)
+					"function": STRING,
+					"args": []
+				}
+			}
+		]
+	}
+}

@@ -6,8 +6,8 @@ var port = 3000;
 
 app.use(express.static(__dirname + '/www'));
 
-app.get('/', function(req, res){
-  res.send('Hello world !');
+app.get('/', function (req, res) {
+	res.send('Hello world !');
 });
 
 server.listen(port);
