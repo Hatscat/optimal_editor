@@ -17,7 +17,6 @@ function DRAW (data) {
 	for (var c in data.app_content.pages[data.page_k0]) { // boucle sur les composants
 
 		var comp = data.app_content.pages[data.page_k0][c];
-
 		
 		if (comp.images && comp.images.length) {
 
@@ -31,7 +30,6 @@ function DRAW (data) {
 				data.app_buf_x + comp.x * data.app_buf.width - w * comp.anchor_x | 0,
 				data.app_buf_y + comp.y * data.app_buf.height - h * comp.anchor_y | 0,
 				w, h);
-
 		}
 	}
 

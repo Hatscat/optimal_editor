@@ -19,6 +19,8 @@ function SETUP (data) {
 				}
 			}
 		}
+
+		quick_sort_from_obj_prop(data.app_content.pages[p], 'z', -1, 0, data.app_content.pages[p].length-1);
 	}
 
 	data.canvas = createCanvas(1, 1);
@@ -29,7 +31,7 @@ function SETUP (data) {
 	//data.app_buf.show();
 
 	imageMode(data.image_mode);
-	
+
 	data.page_k0 = data.editor_conf.current_page;
 
 	//textAlign(CENTER, CENTER);
