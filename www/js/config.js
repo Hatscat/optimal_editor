@@ -28,6 +28,7 @@ function get_config () {
 		canvas: null,
 		app_buf: null,
 		app_content: null,
+		custom_methods: {},
 		delta_time: 1
 
 	};

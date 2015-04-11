@@ -3,7 +3,8 @@
 		"homepage": [
 			{
 				"img_src": [
-					"test.png"
+					"test.png",
+					"test2.png"
 				],
 				"graphic_name": null,
 				"anchor_x": 0.5,
@@ -14,7 +15,7 @@
 				"w": 0.3,
 				"h": 0.3,
 				"is_visible": true,
-				"href": "login",
+				"href": "signup",
 				"update": {
 					"function": null,
 					"args": []
@@ -28,7 +29,7 @@
 					"args": []
 				},
 				"on_mouse_moved": {
-					"function": null,
+					"function": "draw_img_1_on_hover",
 					"args": []
 				},
 				"on_key_pressed": {
@@ -50,7 +51,8 @@
 			},
 			{
 				"img_src": [
-					"test2.png"
+					"test2.png",
+					"test.png"
 				],
 				"graphic_name": null,
 				"anchor_x": 0.5,
@@ -61,7 +63,7 @@
 				"w": 0.2,
 				"h": 0.2,
 				"is_visible": true,
-				"href": "signup",
+				"href": "login",
 				"update": {
 					"function": null,
 					"args": []
@@ -75,7 +77,7 @@
 					"args": []
 				},
 				"on_mouse_moved": {
-					"function": null,
+					"function": "draw_img_1_on_hover",
 					"args": []
 				},
 				"on_key_pressed": {
