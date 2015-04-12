@@ -12,6 +12,7 @@ function MOUSE_RELEASED (data) {
 
 			if (comp.href) {
 
+				data.page_x = data.page_y = 0;
 				data.page_k0 = comp.href;
 
 			} else {

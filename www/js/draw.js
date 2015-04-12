@@ -22,8 +22,8 @@ function DRAW (data) {
 		}
 	});
 
-	// frame rate 
+	/*// frame rate 
 	fill(0, 255, 0);
 	textSize(width * 0.0225 | 0);
-	text(frameRate()+0.5|0, 10, 30);
+	text(frameRate()+0.5|0, 10, 30);*/
 }

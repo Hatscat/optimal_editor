@@ -12,4 +12,13 @@ function WINDOW_RESIZED (data) {
 
 	data.app_buf_x = (width - data.app_buf.width) * 0.5 | 0;
 	data.app_buf_y = (height - data.app_buf.height) * 0.5 | 0;
+
+	//data.json_ui_iframe.style.top = (data.json_ui_y * windowHeight) + 'px';
+	//data.json_ui_iframe.width = data.canvas_x * windowWidth | 0;
+	//data.json_ui_iframe.height = windowHeight - (data.json_ui_y * windowHeight);
+
+	for_eah_components_in_each_pages(data, function (comp) {
+
+		set_component_box(data, comp);
+	});
 }
